@@ -10,9 +10,11 @@ function NewMeetupForm(props) {
   const descInputRef = useRef();
 
   function submitHandler(event) {
+    // require event handler
     // disable default behaviour
-    // setting up payload
     event.preventDefault();
+
+     // setting up payload, ref takes in value from useRef object
     const enteredTitle = titleInputRef.current.value;
     const enteredImage = imageInputRef.current.value;
     const enteredAddress = addressInputRef.current.value;
@@ -32,19 +34,19 @@ function NewMeetupForm(props) {
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor="title">Meetup Title</label>
+          <label>Meetup Title</label>
           <input type="text" required id="title" ref={titleInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor="image">Meetup Image</label>
+          <label>Meetup Image</label>
           <input type="url" required id="image" ref={imageInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor="address">Address</label>
+          <label>Address</label>
           <input type="text" required id="address" ref={addressInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor="description">Description</label>
+          <label>Description</label>
           <textarea
             id="description"
             required

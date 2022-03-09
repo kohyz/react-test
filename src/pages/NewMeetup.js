@@ -5,7 +5,7 @@ function NewMeetupPage() {
   const navigate = useNavigate();
 
   function addMeetupHandler(meetupData) {
-    // send http request here
+    // sending a post request
     fetch(
       "https://react-demo-f66e4-default-rtdb.asia-southeast1.firebasedatabase.app/meetups.json",
       {
@@ -16,6 +16,7 @@ function NewMeetupPage() {
         },
       }
     ).then(() => {
+      // after promise is received, navigate to url
       navigate("/");
     });
   }

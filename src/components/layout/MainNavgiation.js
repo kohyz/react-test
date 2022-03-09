@@ -9,6 +9,7 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
+            {/* its like a href */}
             <Link to="/">All meetups</Link>
           </li>
           <li>

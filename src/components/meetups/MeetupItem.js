@@ -3,6 +3,7 @@ import classes from "./MeetupItem.module.css";
 import Card from "../ui/Card";
 
 function MeetupItem(props) {
+  // passing in props as object and generating dynamiclly
   return (
     <Card>
       <li className={classes.item}>

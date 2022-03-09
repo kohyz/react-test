@@ -3,6 +3,8 @@ import MeetupItem from "./MeetupItem";
 
 function MeetupList(props) {
   return (
+    // putting a list through an unordered list
+    // auto populate
     <ul className={classes.list}>
       {props.meetups.map((meetup) => (
         <MeetupItem
