@@ -5,7 +5,7 @@ const FavouritesContext = createContext({
   totalFavourites: 0,
   addFavourite: (favouriteMeetup) => {},
   removeFavourite: (meetupId) => {},
-  itemIsFavourite: (meetupId) => {}
+  itemIsFavourite: (meetupId) => {},
 });
 
 // should wrap other components
@@ -14,6 +14,8 @@ export function FavouritesContextProvider(props) {
   const [userFavourites, setUserFavourites] = useState([]);
   function addFavouriteHandler(favouriteMeetup) {
     // state not instant, scheduled update -> dont use setUserFavourites(userFavourites.concat(favouriteMeetup))
+    // state stores temporarily only, once u refresh page all gone
+
     setUserFavourites((prevUserFavourites) => {
       return prevUserFavourites.concat(favouriteMeetup);
     });
